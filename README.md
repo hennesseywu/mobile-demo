@@ -1,4 +1,5 @@
-# mobile-test
+# 一套标准的vue-cli3移动端demo
+
 
 ## Project setup
 ```
