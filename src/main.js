@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
+import './assets/style/reset.less'
+import 'lib-flexible/flexible.js'
 
 Vue.config.productionTip = false
 

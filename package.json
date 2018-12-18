@@ -17,6 +17,10 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0-0",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
+    "lib-flexible": "^0.3.2",
+    "postcss-px2rem": "^0.3.0",
     "vue-template-compiler": "^2.5.17"
   },
   "eslintConfig": {
@@ -35,7 +39,13 @@
   },
   "postcss": {
     "plugins": {
-      "autoprefixer": {}
+      "autoprefixer": {},
+      "postcss-px2rem": {
+        "rootValue": 75,
+        "propList": [
+          "*"
+        ]
+      }
     }
   },
   "browserslist": [
