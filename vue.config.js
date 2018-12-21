@@ -1,11 +1,15 @@
 let postcssPr = require('postcss-pr');
 let postcssImport = require('postcss-import');
 let cssnext = require("postcss-cssnext")
+const path = require('path');
 
+function resolve(dir) {
+  return path.join(__dirname, dir)
+}
 module.exports = {
-  baseUrl: process.env.NODE_ENV === 'production'
-    ? '/'
-    : '/',
+  baseUrl: process.env.NODE_ENV === 'production' ?
+    '/' :
+    '/',
 
   outputDir: 'dist',
 
@@ -61,10 +65,16 @@ module.exports = {
   // https://github.com/mozilla-neutrino/webpack-chain
   chainWebpack: (config) => {
     // 因为是多页面，所以取消 chunks，每个页面只对应一个单独的 JS / CSS
-    config.optimization
-      .splitChunks({
-        cacheGroups: {}
-      });
+    config.resolve.alias
+      // .set('@', resolve('src'))
+      .set('styles', resolve('src/assets/styles'))
+      .set('images', resolve('src/assets/images'))
+    //   .set('layout', resolve('src/layout'))
+    //   .set('base', resolve('src/base'))
+    //   .set('static', resolve('src/static'))
+    // .set('layout', resolve('src/layout'))
+    // .set('base', resolve('src/base'))
+    // .set('static', resolve('src/static'))
 
     // 'src/lib' 目录下为外部库文件，不参与 eslint 检测
     // config.module
@@ -96,14 +106,14 @@ module.exports = {
         plugins: [
           postcssImport,
           cssnext({
-              features: {
-                  rem: false
-              }
+            features: {
+              rem: false
+            }
           }),
           postcssPr({
-              fontSize: 32
+            fontSize: 32
           })
-      ]
+        ]
       }
     }
   },

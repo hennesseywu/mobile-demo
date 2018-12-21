@@ -7,7 +7,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   //全局state
   state: {
-    isLogin:false
+    isLogin: false
   },
   //全局mutations
   mutations: {
@@ -18,6 +18,5 @@ export default new Vuex.Store({
 
   },
   //子vuex
-  modules: {
-  }
+  modules: {}
 })

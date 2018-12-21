@@ -113,6 +113,7 @@
 <script>
 import Vue from "vue"
 import {Toast} from 'mint-ui';
+import Router from '@/router'
   export default {
     name: "index",
     components: {},
@@ -177,17 +178,15 @@ import {Toast} from 'mint-ui';
     methods: {
 
     }
-
   }
 </script>
 <style lang="less" scoped>
   .pullnew {
-    background: url("../../assets/images/bg.png") no-repeat center;
+    background: url("~images/bg.png") no-repeat center;
     background-size: cover;
     padding-top: 120pr;
     text-align: center;
     height: 100%;
-
     .head {
       .back {
         color: #ffffff;
@@ -208,7 +207,7 @@ import {Toast} from 'mint-ui';
     }
 
     .rule-button {
-      background: url("../../assets/images/rule-button.png") no-repeat center;
+      background: url("~images/rule-button.png") no-repeat center;
       width: 176pr;
       height: 70pr;
       background-size: cover;
@@ -220,7 +219,7 @@ import {Toast} from 'mint-ui';
     }
 
     .title {
-      background: url("../../assets/images/title.png") no-repeat center;
+      background: url("~images/title.png") no-repeat center;
       width: 464pr;
       height: 83pr;
       margin: 0 auto;
@@ -228,14 +227,14 @@ import {Toast} from 'mint-ui';
     }
 
     .pullnew-title {
-      background: url("../../assets/images/house.png") no-repeat center;
+      background: url("~images/house.png") no-repeat center;
       background-size: cover;
       width: 650pr;
       height: 205pr;
       margin: 24pr auto 0 auto;
 
       .share-button {
-        background: url("../../assets/images/share-button.png") no-repeat center;
+        background: url("~images/share-button.png") no-repeat center;
         width: 341pr;
         height: 109pr;
         margin: 0 auto;
@@ -253,7 +252,7 @@ import {Toast} from 'mint-ui';
       margin: -40pr 17pr 17pr 21pr;
 
       .left-top-icon {
-        background: url("../../assets/images/icon1.png") no-repeat center;
+        background: url("~images/icon1.png") no-repeat center;
         background-size: cover;
         width: 50pr;
         height: 70pr;
@@ -263,7 +262,7 @@ import {Toast} from 'mint-ui';
       }
 
       .right-top-icon {
-        background: url("../../assets/images/icon2.png") no-repeat center;
+        background: url("~images/icon2.png") no-repeat center;
         background-size: cover;
         width: 50pr;
         height: 70pr;
@@ -273,7 +272,7 @@ import {Toast} from 'mint-ui';
       }
 
       .left-bottom-icon {
-        background: url("../../assets/images/icon3.png") no-repeat center;
+        background: url("~images/icon3.png") no-repeat center;
         background-size: cover;
         width: 50pr;
         height: 70pr;
@@ -283,7 +282,7 @@ import {Toast} from 'mint-ui';
       }
 
       .right-bottom-icon {
-        background: url("../../assets/images/icon4.png") no-repeat center;
+        background: url("~images/icon4.png") no-repeat center;
         background-size: cover;
         width: 50pr;
         height: 70pr;
@@ -305,7 +304,7 @@ import {Toast} from 'mint-ui';
       }
 
       .progress-bg {
-        background: url("../../assets/images/progress-bg.png") no-repeat center;
+        background: url("~images/progress-bg.png") no-repeat center;
         background-size: cover;
         width: 668pr;
         height: 82pr;
@@ -411,7 +410,7 @@ import {Toast} from 'mint-ui';
         justify-content: center;
 
         .timeline {
-          background: url("../../assets/images/timeline.png") no-repeat center;
+          background: url("~images/timeline.png") no-repeat center;
           background-size: cover;
           margin-right: 84pr;
           width: 62pr;
@@ -419,7 +418,7 @@ import {Toast} from 'mint-ui';
         }
 
         .weixin {
-          background: url("../../assets/images/weixin.png") no-repeat center;
+          background: url("~images/weixin.png") no-repeat center;
           background-size: cover;
           margin-right: 81pr;
           width: 81pr;
@@ -427,7 +426,7 @@ import {Toast} from 'mint-ui';
         }
 
         .weibo {
-          background: url("../../assets/images/weibo.png") no-repeat center;
+          background: url("~images/weibo.png") no-repeat center;
           background-size: cover;
           margin-right: 77pr;
           width: 80pr;
@@ -435,7 +434,7 @@ import {Toast} from 'mint-ui';
         }
 
         .save-img {
-          background: url("../../assets/images/save-img.png") no-repeat center;
+          background: url("~images/save-img.png") no-repeat center;
           background-size: cover;
           width: 62pr;
           height: 62pr;
@@ -461,7 +460,7 @@ import {Toast} from 'mint-ui';
         }
 
         .drawing {
-          background: url("../../assets/images/drawing.png") no-repeat center;
+          background: url("~images/drawing.png") no-repeat center;
           background-size: cover;
           width: 197pr;
           height: 78pr;
@@ -572,7 +571,7 @@ import {Toast} from 'mint-ui';
                   width: 225pr;
                   height: 96pr;
                   right: 18pr;
-                  background: url("../../assets/images/reminded.png") no-repeat center;
+                  background: url("~images/reminded.png") no-repeat center;
                   background-size: cover;
                 }
 
@@ -581,7 +580,7 @@ import {Toast} from 'mint-ui';
                   width: 225pr;
                   height: 96pr;
                   right: 18pr;
-                  background: url("../../assets/images/remind-login.png") no-repeat center;
+                  background: url("~images/remind-login.png") no-repeat center;
                   background-size: cover;
                 }
               }
@@ -592,14 +591,14 @@ import {Toast} from 'mint-ui';
                 margin: 17pr 102pr 17pr 102pr;
 
                 .dot {
-                  background: url(../../assets/images/dot1.png);
+                  background: url(~images/dot1.png);
                   background-size: cover;
                   width: 33pr;
                   height: 33pr;
                 }
 
                 .dot-grey {
-                  background: url(../../assets/images/dot2.png);
+                  background: url(~images/dot2.png);
                   background-size: cover;
                   width: 33pr;
                   height: 33pr;
