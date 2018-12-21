@@ -1,3 +1,7 @@
+let postcssPr = require('postcss-pr');
+let postcssImport = require('postcss-import');
+let cssnext = require("postcss-cssnext")
+
 module.exports = {
   baseUrl: process.env.NODE_ENV === 'production'
     ? '/'
@@ -89,6 +93,17 @@ module.exports = {
 
       postcss: {
         // options here will be passed to postcss-loader
+        plugins: [
+          postcssImport,
+          cssnext({
+              features: {
+                  rem: false
+              }
+          }),
+          postcssPr({
+              fontSize: 32
+          })
+      ]
       }
     }
   },
